@@ -1,7 +1,38 @@
+.main-nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-nav ul li a{
 
-.icon-container {
-  text-align: center;
-  margin: 20px 0;
-  }
- 
-  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}
+.menu-bar {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+.icone1,
+.icone2 {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}

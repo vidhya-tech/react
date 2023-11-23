@@ -1,18 +1,33 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-
+import './App.css';
 import reportWebVitals from './reportWebVitals';
-import Icons from './Icons';
+
+import Form from './Form';
+
+
+
+
+
+
+
+
+
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+ 
+ 
+ 
+ <Form />
+ 
+ 
+ 
     
-    
-    <Icons />
   </React.StrictMode>
 
   

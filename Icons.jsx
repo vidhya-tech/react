@@ -1,38 +1,50 @@
-import React from 'react';
-import { Container, Row, Col, Button } from 'react-bootstrap';
-import { FaHome, FaUser, FaCog } from 'react-icons/fa';
+import React, { useState } from 'react';
 
-function Icons() {
+const Icons = () => {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsActive(!isActive);
+  };
+
   return (
-    <Container>
-      <h1>Welcome to My React App</h1>
-      <Row>
-        <Col md={4}>
-          <div className="icon-container">
-            <FaHome size={64} />
-            <p>Home</p>
-          </div>
-        </Col>
-        <Col md={4}>
-          <div className="icon-container">
-            <FaUser size={64} />
-            <p>Profile</p>
-          </div>
-        </Col>
-        <Col md={4}>
-          <div className="icon-container">
-            <FaCog size={64} />
-            <p>Settings</p>
-          </div>
-        </Col>
-
- 
-
-
-      </Row>
-      <Button variant="primary">Click me</Button>
-    </Container>
+    <>
+    <div className={`navbar ${isActive ? 'active' : ''}`}>
+  
+      <a href="#" className="btn" onClick={handleButtonClick}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </a>
+      <div className="navbar-links">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Service</a></li>
+          <li><a href="#">Download</a></li>
+        </ul>
+      </div>
+    </div>
+      <div className="text-box">
+      <h1>World's Biggest university</h1>
+      <p>
+        Making a website is now one of the easiest things in the world. You
+        just need to learn HTML, CSS,
+        <br />
+        JavaScript, and you are good to go.
+      </p>
+      <button className="hero-btn">Visit us to know More</button>
+    </div>
+  </>
   );
-}
+};
 
 export default Icons;
+
+
+
+    
+  
+
+
+ 
